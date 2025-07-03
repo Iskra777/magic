@@ -1,0 +1,458 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #000;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+.hero {
+  text-align: center;
+  background-color: #111;
+  max-width: 800px;
+  margin:  60px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+}
+
+.hero h1 {
+color: #e100ff;
+text-shadow: 0 0 10px #e100ff88;
+font-size: 32px;
+margin: 0 0 10px 0;
+}
+
+.hero p {
+  padding: 100px 20px;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.block {
+  background: rgba(0, 0, 0, 0.3); /* напівпрозорий чорний */
+  border-radius: 20px;
+  padding: 40px 30px;
+  margin: 40px auto;
+  max-width: 800px;
+  color: #fff;
+  backdrop-filter: blur(10px); /* ефект скла */
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(173, 94, 255, 0.3); /* м’яке неонове світіння */
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+
+
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #111;
+  color: #666;
+  font-size: 14px;
+}
+
+/* scroll reveal */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+ .hero h1 {
+    font-size: 28px;
+  }
+
+.block:hover {
+  color: #fff;
+  box-shadow: 0 0 15px #ffffff33;
+}
+
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;     /* робить круглою */
+  object-fit: cover;      /* обрізає зайве */
+  margin: 20px auto;
+  display: block;         /* центрує */
+  border: 3px solid #fff; /* контур білий */
+  box-shadow: 0 0 20px #ffffff22;
+}
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.social-links img {
+  width: 40px;
+  height: 40px;
+  filter: brightness(1);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.5);
+}
+h2 {
+  position: relative;
+  display: inline-block;
+  font-size: 28px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  color: #ff66ff;
+  text-shadow: 0 0 12px #ff66ff88;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0%;
+  background-color: #d09cff;
+  transition: width 0.5s ease;
+}
+.block:hover h2::after,
+.hero:hover h2::after {
+  width: 100%;
+}
+@keyframes cyber-glow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.hero.block {
+padding: 40px 30px;
+margin-top: 40px;
+text-align: centr;
+}
+
+h1 {
+  color: #e100ff;
+  text-shadow: 0 0 10px #e100ff88;
+  font-size: 28px;
+  margin: 0;
+}
+.hero-full {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #0a0a0a;
+  text-align: center;
+  box-shadow:
+    0 0 20px rgba(180, 0, 255, 0.4),
+    0 0 35px rgba(180, 0, 255, 0.3),
+    0 0 50px rgba(180, 0, 255, 0.2);
+}
+
+.hero-full h1 {
+  color: #e100ff;
+  font-size: 15px;
+  margin: 0;
+  text-shadow: 0 0 10px #e100ff88;
+}
+
+.hero-full p {
+  color: #ccc;
+  margin-top: 8px;
+}
+
+.inner-card,
+.project-card {
+  background: rgba(0, 0, 0, 0.4); /* прозорість */
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  color: #fff;
+  backdrop-filter: blur(8px); /* ефект скла */
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 0 18px rgba(173, 94, 255, 0.4); /* фіолетова тінь */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inner-card:hover,
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(173, 94, 255, 0.8);
+}
+
+.more-about-me {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease, opacity 0.8s ease;
+  opacity: 0;
+}
+
+.more-about-me.open {
+  max-height: 1000px; /* Можеш збільшити, якщо потрібно */
+  opacity: 1;
+}
+
+/* Aurora mode */
+body.aurora-mode {
+  background: radial-gradient(ellipse at top, #0f0c29, #302b63, #24243e);
+  background-size: 200% 200%;
+  animation: auroraFlow 12s ease-in-out infinite;
+  color: #ffffff;
+}
+
+@keyframes auroraFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Стилі для кнопки */
+#toggleAurora {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #6a00ff, #ae00ff);
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 0 15px #6a00ff;
+  transition: background 0.3s;
+}
+
+#toggleAurora:hover {
+  background: linear-gradient(45deg, #8f00ff, #c000ff);
+}
+
+/* Зорі */
+#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body.aurora-mode #stars {
+  background: url('https://raw.githubusercontent.com/lokesh-coder/pretty-starry-night/main/star-bg.png');
+  background-size: cover;
+  opacity: 0.5;
+  animation: starsMove 30s linear infinite;
+}
+
+@keyframes starsMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1000px 1000px;
+  }
+}
+
+/* Місяць */
+#moon {
+  position: fixed;
+  top: 40px;
+  right: 60px;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #fefcd7, #f3c623);
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(255, 255, 200, 0.8);
+  z-index: -2;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 1s ease, transform 0.8s ease;
+  pointer-events: none;
+  animation: moonGlow 6s ease-in-out infinite, moonDrift 40s linear infinite;
+}
+
+/* Пульсація (дихання світлом) */
+@keyframes moonGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 255, 200, 0.6);
+    transform: scale(0.95);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(255, 255, 220, 1);
+    transform: scale(1);
+  }
+}
+
+/* Плавне дрейфування (рух) */
+@keyframes moonDrift {
+  0% {
+    top: 40px;
+    right: 60px;
+  }
+  50% {
+    top: 60px;
+    right: 50px;
+  }
+  100% {
+    top: 40px;
+    right: 60px;
+  }
+}
+
+body.aurora-mode #moon {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* Активуємо зорі при режимі */
+body.aurora-mode #stars {
+  opacity: 1;
+}
+
+/* Стилі самих зірок */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite ease-in-out;
+  opacity: 0.8;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+#shooting-stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* Зоря */
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow: 0 0 8px white;
+  border-radius: 50%;
+  animation: shoot 1s linear forwards;
+}
+
+@keyframes shoot {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-300px, 300px);
+    opacity: 0;
+  }
+}
+
+/* ☄️ Метеор */
+.meteor {
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, white, rgba(255,255,255,0));
+  opacity: 1;
+  transform: rotate(45deg);
+  animation: meteorMove 1.5s linear forwards;
+  box-shadow: 0 0 15px #fff;
+}
+
+@keyframes meteorMove {
+  0% {
+    top: -20px;
+    left: 100%;
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    left: -200px;
+    opacity: 0;
+  }
+}
+
+/* Стандартний (денний) фон */
+body {
+  background: linear-gradient(to bottom, #e0e7ff, #ffffff); /* світле небо */
+  color: #000;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Нічний режим з зорями */
+body.stars-mode {
+  background: radial-gradient(ellipse at bottom, #0b0c2a 0%, #000 100%);
+  color: #fff;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Щоб чорні блоки не зникали на світлому фоні */
+.block,
+.card {
+  background: rgba(0, 0, 0, 0.4); /* трохи прозорий чорний */
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 0 12px rgba(255, 0, 255, 0.2);
+  transition: background 0.5s ease;
+}
+
+/* Коли денний фон — зробити блоки світлими */
+body:not(.stars-mode) .block,
+body:not(.stars-mode) .card {
+  background: rgba(255, 255, 255, 0.7);
+  color: #000;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: white;
+  background: linear-gradient(45deg, #6a00ff, #ae00ff);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.read-more-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 255, 0.6);
+}
