@@ -15,18 +15,7 @@ window.addEventListener('load', revealOnScroll);
 
 
 
-function toggleMore() {
-  const hiddenContent = document.querySelector('.more-about-me');
-  const btn = document.querySelector('.read-more-btn');
 
-  hiddenContent.classList.toggle('open');
-
-  if (hiddenContent.classList.contains('open')) {
-    btn.textContent = '🔙 Приховати';
-  } else {
-    btn.textContent = '📖 Читати більше';
-  }
-}
 
 function createStars(count = 100) {
   const starContainer = document.getElementById('stars');
@@ -97,3 +86,19 @@ setInterval(() => {
   }
 }, 35000); // змінюй частоту метеора тут
 
+function revealOnScroll() {
+  const reveals = document.querySelectorAll('.reveal');
+
+  reveals.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+    const revealPoint = 100;
+
+    if (elementTop < windowHeight - revealPoint) {
+      el.classList.add('visible');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll); // для першого завантаження
